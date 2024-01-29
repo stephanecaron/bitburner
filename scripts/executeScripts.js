@@ -8,7 +8,10 @@ export async function executeScripts(ns, hostname) {
   
     ns.scp('configs.txt', hostname, 'home')
     ns.scp(hackingScript, hostname, 'home')
-    let ram = ns.getServerMaxRam(hostname)-ns.getServerUsedRam(hostname)
+    let ram = ns.getServerMaxRam(hostname) - ns.getServerUsedRam(hostname)
+    if (hostname === 'home') {
+      ram -= 0;
+    }
     let cost = ns.getScriptRam(hackingScript)
     let possibleThreads = Math.floor(ram / cost)
     let fullInstances = Math.floor(possibleThreads / maxThreads)
