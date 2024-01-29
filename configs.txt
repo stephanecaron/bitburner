@@ -1,0 +1,3 @@
+maxThreads:16
+moneyFarm:joesguns
+hackingScript:early-game-hack.js
