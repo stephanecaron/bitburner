@@ -1,7 +1,7 @@
-import {scanServers} from 'scanServers.js'
+import {findAllServers} from 'scripts/findAllServers.js'
 /** @param {NS} ns */
 export async function main(ns) {
-  let serversList = await scanServers(ns)
+  let serversList = await findAllServers(ns)
   for (const server of serversList){
     let serverFiles = ns.ls(server)
     for (const file of serverFiles) {

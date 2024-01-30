@@ -6,3 +6,5 @@ export async function main(ns) {
     let moneyFarm = configsArray.find(config => config.includes('moneyFarm:'))?.split(':')[1]?.trim().split(',');
     let hackingScript = configsArray.find(config => config.includes('hackingScript:'))?.split(':')[1]?.trim();
   }
+
+  run4theh111z
